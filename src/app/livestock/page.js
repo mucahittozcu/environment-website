@@ -52,7 +52,7 @@ const handleAddItem = () => {
     }
 return (
   
-  <div className="bg-[#4A7A4C] xl:bg-[#4A7A4C] lg:bg-slate-400 md:bg-yellow-300 sm:bg-green-300 md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
+  <div className="bg-[#4A7A4C] md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
   
         <div className="flex flex-col md:flex-col w-full h-auto justify-center items-center xl:w-[350px] lg:w-[300px] md:w-[200px] md:h-screen md:justify-start md:items-start">
           <div className="md:pb-[80px] ml-5 pt-8 text-white text-xl font-semibold flex flex-col justify-center items-center">
@@ -92,13 +92,17 @@ return (
     <div className="rounded-3xl pt-2 ml-5 bg-white mr-6 w-[600px] h-[950px] xl:w-[1600px] xl:h-[910px] lg:w-[820px] lg:h-[910px] lg:mt-3 md:w-[680px] md:h-[910px] md:mt-3 ">
         <div className="flex pt-2 justify-between md:px-5 px-2">
           <h2 className="text-[#4A7A4C] pt-4 text-4xl font-bold">Manage Livestock</h2>
-          <div className=" flex mt-5">
+          <div className=" flex mt-8">
           <div className="relative mr-5">
-            <button className="bg-[#4A7A4C] px-10 pl-12 py-2 mt-2 rounded-lg text-white font-bold"> View Live</button>
-            <FiRadio size={30} color="white" className="absolute bottom-[10%] left-[3%] " />
+            <button className="bg-[#4A7A4C] w-[150px] h-[50px] pl-12 rounded-lg text-white font-bold"> View Live</button>
+            <FiRadio size={30} color="white" className="absolute bottom-[20%] left-[5%] " />
           </div>
-            <button onClick={openModal} className="bg-[#4A7A4C] px-12  rounded-lg text-white font-bold">+ Add Cattle</button>
+            <button onClick={openModal} className="bg-[#4A7A4C] w-[150px] h-[50px] rounded-lg text-white font-bold">+ Add Cattle</button>
           </div>
+        </div>
+        <div className="flex justify-end items-end pt-5 pr-10 gap-x-5">
+           <p className="bg-[#4A7A4C] w-[150px] h-[50px] flex justify-center items-center rounded-lg text-white text-xl font-bold">Total: 63</p>
+           <p className="bg-[#4A7A4C] w-[250px] h-[50px] flex justify-center items-center rounded-lg text-white text-2xl font-bold">Area: 25Acres</p>
         </div>
 {showModal && <Modal closeModal={closeModal} showModal={showModal} cattle={cattle} setCattle={setCattle} breed={breed} setBreed={setBreed} count={count} setCount={setCount}  handleAddItem={handleAddItem} handleAddCattle={handleAddCattle}  />}  
 {showModal2 && <Modal2 closeModal2={closeModal2} showModal2={showModal2} soil2={soil2} setSoil2={setSoil2} />}  

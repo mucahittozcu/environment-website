@@ -46,7 +46,7 @@ const page = () => {
 
   return (
   
-<div className="bg-[#4A7A4C] xl:bg-[#4A7A4C] lg:bg-slate-400 md:bg-yellow-300 sm:bg-green-300 md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
+<div className="bg-[#4A7A4C] md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
 
       <div className="flex flex-col md:flex-col w-full h-auto justify-center items-center xl:w-[350px] lg:w-[300px] md:w-[200px] md:h-screen md:justify-start md:items-start">
         <div className="md:pb-[80px] ml-5 pt-8 text-white text-xl font-semibold flex flex-col justify-center items-center">

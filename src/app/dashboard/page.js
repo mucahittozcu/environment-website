@@ -8,6 +8,8 @@ import { IoIosResize } from "react-icons/io";
 import { PiFarmFill } from "react-icons/pi";
 import { BiSolidImageAdd } from "react-icons/bi";
 import { FiRadio } from "react-icons/fi";
+import { FaCircle } from "react-icons/fa";
+import { Chart } from "react-google-charts"
 
 const dashboard = () => {
   const [showModal2,setShowModal2] = useState(false)
@@ -21,17 +23,31 @@ const dashboard = () => {
     setShowModal2(false)
   }
 useEffect(() => {
+  // setFarm([
+  //   { name: 'Wheat', value: Math.floor(Math.random() * 100) + 1 },
+  //   { name: 'Corn', value: Math.floor(Math.random() * 100) + 1 },
+  //   { name: 'Barley', value: Math.floor(Math.random() * 100) + 1 },
+  //   { name: 'Paddy', value: Math.floor(Math.random() * 100) + 1 },
+  // ])
   setFarm([
-    { name: 'Wheat', value: Math.floor(Math.random() * 100) + 1 },
-    { name: 'Corn', value: Math.floor(Math.random() * 100) + 1 },
-    { name: 'Barley', value: Math.floor(Math.random() * 100) + 1 },
-    { name: 'Paddy', value: Math.floor(Math.random() * 100) + 1 },
+    ["Crop", "Value"],
+    ["Wheat", Math.floor(Math.random() * 100) + 1],
+    ["Corn", Math.floor(Math.random() * 100) + 1],
+    ["Barley", Math.floor(Math.random() * 100) + 1],
+    ["Paddy", Math.floor(Math.random() * 100) + 1],
   ])
 },[])
+const colors = ["#FF9494", "#0066C5", "#FF0000", "#60A662"]
 
+const options = {
+  title: "My Crops Distribution",
+  pieHole: 0.5,
+  is3D: false,
+  colors: ["#FF9494", "#0066C5", "#FF0000", "#60A662"] 
+}
 return (
   
-  <div className="bg-[#4A7A4C] xl:bg-[#4A7A4C] lg:bg-slate-400 md:bg-yellow-300 sm:bg-green-300 md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
+  <div className="bg-[#4A7A4C] md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
   
         <div className="flex flex-col md:flex-col w-full h-auto justify-center items-center xl:w-[350px] lg:w-[300px] md:w-[200px] md:h-screen md:justify-start md:items-start">
           <div className="md:pb-[80px] ml-5 pt-8 text-white text-xl font-semibold flex flex-col justify-center items-center">
@@ -72,37 +88,47 @@ return (
         <div className="flex pt-2 justify-between md:px-5 px-2">
           <h2 className="text-[#4A7A4C] pt-4 text-4xl font-bold">Manage Livestock</h2>
           <div className="relative">
-            <button className="bg-[#4A7A4C] px-10 py-1 mt-2 rounded-lg text-white font-bold"> View Live</button>
-            <FiRadio size={30} color="white" className="absolute bottom-[30%] left-[3%] " />
+            <button className="bg-[#4A7A4C] w-[150px] h-[50px] pl-10 mt-2 rounded-lg text-white font-bold"> View Live</button>
+            <FiRadio size={30} color="white" className="absolute bottom-[17%] left-[5%] " />
           </div>
         </div>
-      <div className="flex justify-center items-center gap-x-72 pt-24 ">
+              {showModal2 && <Modal2 closeModal2={closeModal2} showModal2={showModal2} soil2={soil2} setSoil2={setSoil2} />}
+      <div className="flex justify-center items-center gap-x-44 pt-14 ">
         <div className="text-[#4A7A4C] font-semibold flex flex-col text-xl ">
            <h3>Farms:</h3>
            <h3>Area:</h3>
            <h3>Expected date of Harvest:</h3>
-           <img className="w-[450px] h-[550px] rounded-3xl shadow-2xl pt-5" src={"Rectangle 46.png"} />
+           <img className="w-[550px] h-[650px] rounded-3xl shadow-2xl pt-5" src={"Rectangle 46.png"} />
         </div>
 
-        <div className="flex flex-col gap-y-5 pt-16">
+        <div className="flex flex-col gap-y-5 pt-12">
           <h3 className="text-[#4A7A4C] font-semibold text-3xl">Crops Distribution</h3>
-          <div className="w-[450px] h-[550px] rounded-3xl shadow-2xl flex flex-col ">
-            <div className="text-xl font-semibold w-[450px] h-[280px]  pt-5 flex justify-end pr-5">
-               <ul className="flex flex-col gap-y-3 list-disc">
-                 <li>Wheat</li>
-                 <li>Corn</li>
-                 <li>Barley</li>
-                 <li>Paddy</li>
+          <div className="w-[650px] h-[650px] rounded-3xl shadow-2xl flex flex-col ">
+            <div className="text-xl font-semibold w-[650px] h-[280px]  pt-5">
+               <ul className="flex justify-center relative ">
+                
+                 <Chart
+                  className=" flex justify-center  bg-blue-400 "
+                   chartType="PieChart"
+                   width="100%"
+                   height="350px"
+                   data={farm}
+                   options={options}
+                 />
+              
                </ul>
             </div>
+            <div className="flex flex-col pt-24">
             <hr/>
-            <div className="flex flex-col">
-            {farm.map((component,index) => (
-             <ul className="flex items-end pl-10 pt-5 list-disc " key={index}>
+            {farm.slice(1).map((component,index) => (
+             <ul className="flex items-end pl-16 pt-5 " key={index}>
               <div className="flex">
-                 <li className=" text-xl font-semibold pt-1">{component.name}:</li>
-                 <span className="text-black pl-5 text-xl pt-2">{component.value}%</span>
-                    {component.value >= 20 ? (
+                  <div className="relative mr-10">
+                     <FaCircle size={20} color={colors[index]} className="absolute top-[20%] left-[0%]" />
+                  </div>
+                     <li className=" text-xl font-semibold pt-1">{component[0]}:</li>
+                     <span style={{color:`${colors[index]}`}} className="pl-5 text-xl pt-2">{component[1]}%</span>
+                    {component[1] >= 20 ? (
                    <div className="text-[#4A7A4C] border-[2px] ml-5 mt-2 border-[#4A7A4C] flex justify-center rounded-md items-center w-[45px] h-[25px] mb-2 text-xs font-semibold">Ready</div>
                     ) : (
                    <div className="text-red-700 border-[2px] ml-5 mt-2 border-red-700 flex justify-center rounded-md items-center w-[80px] h-[25px] mb-2 text-xs font-semibold">Not Ready</div>
@@ -114,7 +140,6 @@ return (
           </div>
         </div>
       </div>
-{showModal2 && <Modal2 closeModal2={closeModal2} showModal2={showModal2} soil2={soil2} setSoil2={setSoil2} />}
         </div>
 
     </div>
