@@ -100,11 +100,11 @@ return (
             <button onClick={openModal} className="bg-[#4A7A4C] w-[150px] h-[50px] rounded-lg text-white font-bold">+ Add Cattle</button>
           </div>
         </div>
+{showModal && <Modal closeModal={closeModal} showModal={showModal} cattle={cattle} setCattle={setCattle} breed={breed} setBreed={setBreed} count={count} setCount={setCount}  handleAddItem={handleAddItem} handleAddCattle={handleAddCattle}  />}  
         <div className="flex justify-end items-end pt-5 pr-10 gap-x-5">
            <p className="bg-[#4A7A4C] w-[150px] h-[50px] flex justify-center items-center rounded-lg text-white text-xl font-bold">Total: 63</p>
            <p className="bg-[#4A7A4C] w-[250px] h-[50px] flex justify-center items-center rounded-lg text-white text-2xl font-bold">Area: 25Acres</p>
         </div>
-{showModal && <Modal closeModal={closeModal} showModal={showModal} cattle={cattle} setCattle={setCattle} breed={breed} setBreed={setBreed} count={count} setCount={setCount}  handleAddItem={handleAddItem} handleAddCattle={handleAddCattle}  />}  
 {showModal2 && <Modal2 closeModal2={closeModal2} showModal2={showModal2} soil2={soil2} setSoil2={setSoil2} />}  
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full pt-5 pl-5 ">  
      {bool && 
