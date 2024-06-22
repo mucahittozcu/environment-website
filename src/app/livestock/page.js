@@ -62,48 +62,48 @@ return (
             <h3 className="font-bold text-xl">Namık Korona</h3>
             <p className="text-sm">Farm Owner</p>
           </div>
-          <div className="flex md:flex-col items-center md:items-start h-0 w-full pb-7">
+          <div className="flex gap-x-2 md:gap-x-0 md:flex-col items-center md:items-start h-5 pb-14">
   <Link href={"/farm"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-3 group-hover:text-[#4A7A4C] group-hover:bg-white font-semibold flex items-center md:w-full md:h-12 w-[180px] h-8">
+    <button className="text-white text-left md:pl-5 pl-2 group-hover:text-[#4A7A4C] group-hover:bg-white font-semibold flex items-center md:w-full md:h-12 w-[110px] h-12">
      <AiOutlineHome size={25} className="text-white mr-2 group-hover:text-[#4A7A4C]" /> Farm Analytics
     </button>
   </Link>
   
   <Link href={"/livestock"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-3 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[150px] h-8 flex items-center">
+    <button className="text-white text-left md:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[110px] h-12 flex items-center">
       <VscFiles size={25} className="mr-2" /> Livestock
     </button>
   </Link>
   
   <Link href={"/dashboard"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-3 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[150px] h-8 flex items-center">
+    <button className="text-white text-left md:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[120px] h-12 flex items-center">
       <PiUsersThreeLight size={25} className="mr-2" /> Dashboard
     </button>
   </Link>
   
   
-  <div className="flex flex-col mt-0 md:mt-20 ">
-      <button onClick={openModal2} className="text-[#4A7A4C] bg-white font-semibold px-5 xl:px-20 lg:px-10 md:px-5 py-2 rounded-lg md:mt-5 mt-8 ml-1 md:ml-5">+ Add Farm</button>
+  <div className="flex flex-col mt-5 md:mt-20 ">
+      <button onClick={openModal2} className="text-[#4A7A4C] bg-white font-semibold px-2 xl:px-20 lg:px-10 md:px-5 py-2 rounded-lg md:mt-5 mt-8 ml-1 md:ml-5">+ Add Farm</button>
   </div>
   </div>
      
     </div>
     
-    <div className="rounded-3xl pt-2 ml-5 bg-white mr-6 w-[600px] h-[950px] xl:w-[1600px] xl:h-[910px] lg:w-[820px] lg:h-[910px] lg:mt-3 md:w-[680px] md:h-[910px] md:mt-3 ">
+    <div className="rounded-3xl pt-2 ml-5 bg-white mr-6 w-[450px] h-[950px] xl:w-[1600px] xl:h-[910px] lg:w-[820px] lg:h-[910px] lg:mt-3 md:w-[680px] md:h-[910px] md:mt-3 ">
         <div className="flex pt-2 justify-between md:px-5 px-2">
-          <h2 className="text-[#4A7A4C] pt-4 text-4xl font-bold">Manage Livestock</h2>
+          <h2 className="text-[#4A7A4C] pt-4 md:text-4xl text-2xl font-bold">Manage Livestock</h2>
           <div className=" flex mt-8">
           <div className="relative mr-5">
-            <button className="bg-[#4A7A4C] w-[150px] h-[50px] pl-12 rounded-lg text-white font-bold"> View Live</button>
-            <FiRadio size={30} color="white" className="absolute bottom-[20%] left-[5%] " />
+            <button className="bg-[#4A7A4C] md:w-[150px] md:h-[50px] w-[130px] h-[40px] pl-12 rounded-lg text-white font-bold"> View Live</button>
+            <FiRadio size={30} color="white" className="md:absolute md:bottom-[35%] md:left-[5%] lg:absolute lg:bottom-[20%] lg:left-[5%] absolute bottom-[30%] left-[5%] " />
           </div>
-            <button onClick={openModal} className="bg-[#4A7A4C] w-[150px] h-[50px] rounded-lg text-white font-bold">+ Add Cattle</button>
+            <button onClick={openModal} className="bg-[#4A7A4C] md:w-[150px] md:h-[50px] w-[130px] h-[40px] rounded-lg text-white font-bold">+ Add Cattle</button>
           </div>
         </div>
 {showModal && <Modal closeModal={closeModal} showModal={showModal} cattle={cattle} setCattle={setCattle} breed={breed} setBreed={setBreed} count={count} setCount={setCount}  handleAddItem={handleAddItem} handleAddCattle={handleAddCattle}  />}  
-        <div className="flex justify-end items-end pt-5 pr-10 gap-x-5">
-           <p className="bg-[#4A7A4C] w-[150px] h-[50px] flex justify-center items-center rounded-lg text-white text-xl font-bold">Total: 63</p>
-           <p className="bg-[#4A7A4C] w-[250px] h-[50px] flex justify-center items-center rounded-lg text-white text-2xl font-bold">Area: 25Acres</p>
+        <div className="flex justify-end items-end pt-5 md:pr-10 pr-5 gap-x-2 md:gap-x-5">
+           <p className="bg-[#4A7A4C] md:w-[150px] md:h-[50px] w-[130px] h-[40px] flex justify-center items-center rounded-lg text-white text-xl font-bold">Total: 63</p>
+           <p className="bg-[#4A7A4C] w-[200px] h-[40px] md:w-[250px] md:h-[50px] flex justify-center items-center rounded-lg text-white text-2xl font-bold">Area: 25Acres</p>
         </div>
 {showModal2 && <Modal2 closeModal2={closeModal2} showModal2={showModal2} soil2={soil2} setSoil2={setSoil2} />}  
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full pt-5 pl-5 ">  
@@ -140,9 +140,9 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
   }
 
   return showModal && (
-    <div className="flex justify-center items-center">
+    <div className="fixed inset-y-0 right-0 md:fixed md:inset-y-0 md:right-0 flex items-center justify-center z-50  bg-opacity-50">
 
-      <div className="rounded-3xl mt-2 shadow-2xl bg-white mr-6 w-[1400px]  h-[800px]">
+      <div className="rounded-3xl mt-2 shadow-2xl bg-white mr-6 xl:w-[1500px]  xl:h-[800px] lg:w-[700px]  lg:h-[800px] md:w-[550px]  md:h-[800px] w-[450px]  h-[800px]">
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal}>Back</button>
 
          <div className="flex justify-center items-center mt-5">
@@ -155,7 +155,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
               type="text"
               placeholder="Enter the Cattle Type"
               name="cattle"
-              className="text-[#4A7A4C] w-[500px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
+              className="text-[#4A7A4C] md:w-[480px] md:h-[40px] w-[300px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
               value={cattle}
               onChange={(event) => setCattle(event.target.value)}
             />
@@ -166,7 +166,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
               type="text"
               placeholder="Enter the Breed"
               name="breed"
-              className="text-[#4A7A4C] w-[500px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
+              className="text-[#4A7A4C] md:w-[480px] md:h-[40px] w-[300px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
               value={breed}
               onChange={(event) => setBreed(event.target.value)}
             />
@@ -176,7 +176,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
               type="number"
               placeholder="Count"
               name="count"
-              className="text-[#4A7A4C] w-[500px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
+              className="text-[#4A7A4C] md:w-[480px] md:h-[40px] w-[300px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
               value={count}
               onChange={(event) => setCount(event.target.value)}
             />
@@ -192,7 +192,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
             />
             <BiSolidImageAdd size={30} color="4A7A4C" className="absolute bottom-[20%] right-[60%] " />  
           </div> 
-            <select className="text-[#4A7A4C] w-[500px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
+            <select className="text-[#4A7A4C] md:w-[480px] md:h-[40px] w-[300px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
               <option value={"male"}>Male</option>
               <option value={"female"}>Female</option>
             </select>
@@ -212,9 +212,9 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
 function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
 
   return showModal2 && (
-    <div className="flex justify-center items-center">
+    <div className="fixed inset-y-0 right-0 flex items-center justify-center z-50  bg-opacity-50">
 
-      <div className="rounded-3xl mt-2 shadow-2xl bg-white mr-6 w-[1400px]  h-[800px]">
+      <div className="rounded-3xl mt-2 shadow-2xl bg-white mr-6 xl:w-[1500px]  xl:h-[800px] lg:w-[700px]  lg:h-[800px] md:w-[600px]  md:h-[800px] w-[450px]  h-[800px]">
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal2}>Back</button>
 
          <div className="flex justify-center items-center mt-5">
@@ -225,11 +225,11 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
               type="text"
               placeholder="Farm Name"
               name="farm"
-              className="text-[#4A7A4C] w-[500px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
+              className="text-[#4A7A4C] md:w-[500px] md:h-[40px] w-[300px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C] "
               value={soil2}
               onChange={(event) => setSoil2(event.target.value)}
             />
-          <PiFarmFill size={30} color="4A7A4C" className="absolute bottom-[10%] left-[-7%] " />  
+          <PiFarmFill size={30} color="4A7A4C" className="md:absolute md:bottom-[7%] md:left-[-7%] absolute bottom-[7%] left-[-10%] " />  
         </div>
           <div className="relative">
             <input
@@ -240,9 +240,9 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
               min="0"
               max="10"
               step="1"
-              className="text-[#4A7A4C] w-[500px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C]"
+              className="text-[#4A7A4C] md:w-[500px] md:h-[40px] w-[300px] h-[40px]  pl-5 border rounded-lg border-[#4A7A4C]"
             />
-          <IoIosResize size={30} color="4A7A4C" className="absolute bottom-[10%] left-[-7%] " />  
+          <IoIosResize size={30} color="4A7A4C" className="md:absolute md:bottom-[7%] md:left-[-7%] absolute bottom-[7%] left-[-10%] " />  
         </div>
           <div className="relative">
             <input
@@ -252,14 +252,14 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
               placeholder="Add Image"
               className="w-[200px] h-[40px] pl-2"
             />
-            <BiSolidImageAdd size={30} color="4A7A4C" className="absolute bottom-[20%] right-[60%] " />  
+            <BiSolidImageAdd size={30} color="4A7A4C" className="md:absolute md:bottom-[20%] md:right-[60%] absolute bottom-[20%] right-[40%] " />  
           </div>
-            <select className="text-[#4A7A4C] w-[500px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
+            <select className="text-[#4A7A4C] md:w-[500px] md:h-[40px] w-[300px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
               <option>Crop Type 1</option>
               <option>Crop Type 2</option>
               <option>Crop Type 3</option>
             </select>
-            <button className="text-white bg-[#4A7A4C] w-[250px] h-[45px] rounded-lg font-bold hover:text-[#4A7A4C] hover:bg-white border border-[#4A7A4C] ">SUBMIT</button>
+            <button className="text-white bg-[#4A7A4C] w-[290px] h-[45px] rounded-lg font-bold hover:text-[#4A7A4C] hover:bg-white border border-[#4A7A4C] ">SUBMIT</button>
          </div>
          </div>
 
