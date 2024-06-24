@@ -49,40 +49,40 @@ return (
   
   <div className="bg-[#4A7A4C] md:flex-row md:justify-start md:items-start h-full md:relative md:overflow-hidden flex justify-center items-center flex-col">
   
-        <div className="flex flex-col md:flex-col w-full h-auto justify-center items-center xl:w-[350px] lg:w-[300px] md:w-[200px] md:h-screen md:justify-start md:items-start">
-          <div className="md:pb-[80px] ml-5 pt-8 text-white text-xl font-semibold flex flex-col justify-center items-center">
-            <div className="rounded-full border-[10px] mb-5 border-white">
-              <img className="w-[100px] h-[100px] xl:w-[200px] xl:h-[200px] lg:w-[160px] lg:h-[160px] md:w-[120px] md:h-[120px] " src={"Ellipse 1 (1).png"} />
-            </div>
-            <h3 className="font-bold text-xl">Namık Korona</h3>
-            <p className="text-sm">Farm Owner</p>
+  <div className="flex flex-col md:flex-col pb-3 lg:pt-8 md:pt-12 xl:pt-0 w-full h-auto justify-center items-center xl:w-[300px] lg:w-[300px] md:w-[200px] md:h-screen md:justify-start md:items-start">
+        <div className="md:pb-[80px] md:ml-2 lg:ml-5 pt-8 text-white text-xl font-semibold flex flex-col justify-center items-center">
+          <div className="rounded-full border-[10px] mb-5 border-white">
+            <img className="w-[100px] h-[100px] xl:w-[200px] xl:h-[200px] lg:w-[170px] lg:h-[170px] md:w-[120px] md:h-[120px] " src={"Ellipse 1 (1).png"} />
           </div>
-          <div className="flex gap-x-2 md:gap-x-0 md:flex-col items-center md:items-start h-0 w-full md:pb-7 pb-14">
-  <Link href={"/farm"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-2 group-hover:text-[#4A7A4C] group-hover:bg-white font-semibold flex items-center md:w-full md:h-12 w-[110px] h-12">
-     <AiOutlineHome size={25} className="text-white mr-2 group-hover:text-[#4A7A4C]" /> Farm Analytics
-    </button>
-  </Link>
-  
-  <Link href={"/livestock"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[110px] h-12 flex items-center">
-      <VscFiles size={25} className="mr-2" /> Livestock
-    </button>
-  </Link>
-  
-  <Link href={"/dashboard"} className="text-left md:w-full md:h-12 h-0 relative group">
-    <button className="text-white text-left md:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[120px] h-12 flex items-center">
-      <PiUsersThreeLight size={25} className="mr-2" /> Dashboard
-    </button>
-  </Link>
-  
-  
-  <div className="flex flex-col mt-0 md:mt-20 ">
-      <button onClick={openModal2} className="text-[#4A7A4C] bg-white font-semibold px-2 xl:px-20 lg:px-10 md:px-5 py-2 rounded-lg md:mt-5 mt-12 ml-1 md:ml-5">+ Add Farm</button>
+          <h3 className="font-bold text-xl">Namık Korona</h3>
+          <p className="text-sm">Farm Owner</p>
+        </div>
+        <div className="flex gap-x-2 md:gap-x-0 md:flex-col items-center md:items-start h-5 pb-10">
+<Link href={"/farm"} className="text-left md:w-full md:h-12 h-0 relative group">
+  <button className="text-white text-left md:pl-2 lg:pl-5 pl-2 group-hover:text-[#4A7A4C] group-hover:bg-white font-semibold flex items-center md:w-full md:h-12 w-[110px] h-12">
+   <AiOutlineHome size={25} className="text-white mr-2 group-hover:text-[#4A7A4C]" /> Farm Analytics
+  </button>
+</Link>
+
+<Link href={"/livestock"} className="text-left md:w-full md:h-12 h-0 relative group">
+  <button className="text-white text-left md:pl-2 lg:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[110px] h-12 flex items-center">
+    <VscFiles size={25} className="mr-2" /> Livestock
+  </button>
+</Link>
+
+<Link href={"/dashboard"} className="text-left md:w-full md:h-12 h-0 relative group">
+  <button className="text-white text-left md:pl-2 lg:pl-5 pl-2 hover:text-[#4A7A4C] hover:bg-white font-semibold md:w-full md:h-12 w-[120px] h-12 flex items-center">
+    <PiUsersThreeLight size={25} className="mr-2" /> Dashboard
+  </button>
+</Link>
+
+
+<div className="flex flex-col mt-0 lg:w-[210px] xl:w-[300px] md:w-[160px] md:mt-20 ">
+    <button onClick={openModal2} className="text-[#4A7A4C] h-[40px] bg-white font-semibold rounded-lg md:mt-5 mt-12 ml-1 lg:ml-5 md:ml-2">+ Add Farm</button>
+</div>
+</div>
+   
   </div>
-  </div>
-    
-    </div>
     
     <div className="overflow-x-hidden relative rounded-3xl pt-2 ml-5 bg-white mr-6 w-[470px] h-[950px] xl:w-[1600px] xl:h-[910px] lg:w-[820px] lg:h-[910px] lg:mt-3 md:w-[680px] md:h-[910px] md:mt-3 ">
         <div className="flex pt-2 justify-between md:px-5 px-8">
@@ -152,7 +152,7 @@ export default dashboard
 function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
 
   return showModal2 && (
-    <div className="fixed inset-y-0 right-0 flex items-center justify-center z-50  bg-opacity-50">
+    <div className="fixed inset-y-72 right-0 inset-x-5 md:fixed md:inset-y-0 md:inset-x-44 lg:fixed lg:inset-y-0 lg:right-0 lg:inset-x-80 md:right-0 flex items-center justify-center z-50  bg-opacity-50">
 
       <div className="rounded-3xl mt-2 shadow-2xl bg-white mr-6 xl:w-[1500px]  xl:h-[800px] lg:w-[700px]  lg:h-[800px] md:w-[600px]  md:h-[800px] w-[450px]  h-[800px]">
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal2}>Back</button>
