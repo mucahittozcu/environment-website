@@ -63,12 +63,12 @@ const signIn = () => {
          
          <div className="flex flex-col gap-y-5 pt-20 items-center">
          <Link href="/farm" >
-           <button className="text-white text-xl font-bold border-[3px] border-[#4A7A4C] bg-[#4A7A4C] xl:w-[400px] xl:h-[60px] lg:w-[350px] lg:h-[55px] md:w-[300px] md:h-[55px] sm:w-[250px] sm:h-[55px] w-[200px] h-[50px] rounded-xl hover:text-[#4A7A4C] hover:bg-white hover:border-[#4A7A4C] xl:hover:w-[405px] xl:hover:h-[65px] lg:hover:w-[355px] lg:hover:h-[60px] md:hover:w-[320px] md:hover:h-[60px] sm:hover:w-[255px] sm:hover:h-[60px] hover:w-[205px] hover:h-[55px] ">Log In</button>
+           <button className="text-white text-xl font-bold border-[3px] border-[#4A7A4C] bg-[#4A7A4C] xl:w-[400px] xl:h-[60px] lg:w-[350px] lg:h-[55px] md:w-[300px] md:h-[55px] sm:w-[250px] sm:h-[55px] w-[200px] h-[50px] rounded-xl hover:text-[#4A7A4C] hover:bg-white hover:border-[#4A7A4C] xl:hover:w-[405px] xl:hover:h-[65px] lg:hover:w-[355px] lg:hover:h-[60px] md:hover:w-[310px] md:hover:h-[55px] sm:hover:w-[245px] sm:hover:h-[60px] hover:w-[205px] hover:h-[55px] ">Log In</button>
          </Link>
          <div>
          <p className=" pt-10 pb-2 ">If you don't have an account...</p>
          <Link href="/signUp" >
-           <button className="text-[#4A7A4C] font-bold text-xl bg-white border-[#4A7A4C] xl:w-[400px] xl:h-[60px] lg:w-[350px] lg:h-[55px] md:w-[300px] md:h-[55px] sm:w-[250px] sm:h-[55px] w-[200px] h-[50px] border-[3px] rounded-xl hover:text-[#ffff] xl:hover:w-[405px] xl:hover:h-[65px] lg:hover:w-[355px] lg:hover:h-[60px] md:hover:w-[320px] md:hover:h-[60px] sm:hover:w-[255px] sm:hover:h-[60px] hover:w-[205px] hover:h-[55px] hover:bg-[#4A7A4C] hover:border-[#4A7A4C]">Sign Up</button>
+           <button className="text-[#4A7A4C] font-bold text-xl bg-white border-[#4A7A4C] xl:w-[400px] xl:h-[60px] lg:w-[350px] lg:h-[55px] md:w-[300px] md:h-[55px] sm:w-[250px] sm:h-[55px] w-[200px] h-[50px] border-[3px] rounded-xl hover:text-[#ffff] xl:hover:w-[405px] xl:hover:h-[65px] lg:hover:w-[355px] lg:hover:h-[60px] md:hover:w-[310px] md:hover:h-[55px] sm:hover:w-[245px] sm:hover:h-[60px] hover:w-[205px] hover:h-[55px] hover:bg-[#4A7A4C] hover:border-[#4A7A4C]">Sign Up</button>
          </Link>
          </div>
          </div>

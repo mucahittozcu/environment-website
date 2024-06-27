@@ -137,6 +137,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
     e.preventDefault()
     handleAddCattle()
     handleAddItem()
+    closeModal()
   }
 
   return showModal && (
@@ -182,7 +183,7 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
             />
             <LuTally5 size={30} color="4A7A4C" className="absolute bottom-[7%] left-[-7%] " />
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <input
               type="image"
               id="myfile"
@@ -191,7 +192,13 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
               className="w-[200px] h-[40px] pl-2"
             />
             <BiSolidImageAdd size={30} color="4A7A4C" className="absolute bottom-[20%] right-[60%] " />  
-          </div> 
+          </div>  */}
+                    
+            <div className="relative w-[200px] h-[50px] pl-2 border-[2px] rounded-xl">
+              Add Image <img src="" placeholder="Add Image" height={18} width={28} />
+            <BiSolidImageAdd size={30} color="4A7A4C" className="absolute bottom-[15%] right-[2%] " />  
+            </div>
+          
             <select className="text-[#4A7A4C] md:w-[480px] md:h-[40px] w-[300px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
               <option value={"male"}>Male</option>
               <option value={"female"}>Female</option>
@@ -210,7 +217,10 @@ function Modal ({ showModal,closeModal,cattle,setCattle,breed,setBreed,count,set
 
 
 function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
-
+const handleModal2Submit = (e) =>{
+  e.preventDefault()
+  closeModal2()
+}
   return showModal2 && (
     <div className="fixed inset-y-72 right-0 inset-x-5 md:fixed md:inset-y-0 md:inset-x-44 lg:fixed lg:inset-y-0 lg:right-0 lg:inset-x-80 md:right-0 flex items-center justify-center z-50  bg-opacity-50">
 
@@ -218,7 +228,7 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal2}>Back</button>
 
          <div className="flex justify-center items-center mt-5">
-         <div className="flex flex-col gap-y-10">
+         <form className="flex flex-col gap-y-10" onSubmit={handleModal2Submit}>
             <h1 className="text-[#4A7A4C] text-5xl font-semibold">FARM DETAILS</h1>
           <div className="relative">       
             <input 
@@ -255,12 +265,12 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
             <BiSolidImageAdd size={30} color="4A7A4C" className="md:absolute md:bottom-[20%] md:right-[60%] absolute bottom-[20%] right-[40%] " />  
           </div>
             <select className="text-[#4A7A4C] md:w-[500px] md:h-[40px] w-[300px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
-              <option>Crop Type 1</option>
-              <option>Crop Type 2</option>
-              <option>Crop Type 3</option>
+              <option value={"crop type 1"}>Crop Type 1</option>
+              <option value={"crop type 2"}>Crop Type 2</option>
+              <option value={"crop type 3"}>Crop Type 3</option>
             </select>
             <button className="text-white bg-[#4A7A4C] w-[290px] h-[45px] rounded-lg font-bold hover:text-[#4A7A4C] hover:bg-white border border-[#4A7A4C] ">SUBMIT</button>
-         </div>
+         </form>
          </div>
 
       </div>

@@ -147,7 +147,10 @@ const page = () => {
 export default page
 
 function Modal ({ showModal,closeModal,soil,setSoil }){
-
+  const handleModalSubmit = (e) =>{
+    e.preventDefault()
+    closeModal()
+  }
   return showModal && (
     <div className="fixed inset-y-72 right-0 inset-x-10 md:fixed md:inset-y-0 md:inset-x-44 lg:fixed lg:inset-y-0 lg:right-0 lg:inset-x-80 md:right-0 flex items-center justify-center z-50  bg-opacity-50">
 
@@ -155,7 +158,7 @@ function Modal ({ showModal,closeModal,soil,setSoil }){
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal}>Back</button>
 
          <div className="flex justify-center items-center mt-5">
-         <div className="flex flex-col gap-y-10">
+         <form onSubmit={handleModalSubmit} className="flex flex-col gap-y-10">
             <h1 className="text-[#4A7A4C] text-5xl font-semibold">CROP DETAILS</h1>
             <select className="text-[#4A7A4C] md:w-[500px] md:h-[40px] w-[300px] h-[40px] pl-5 border rounded-lg border-[#4A7A4C]">
               <option value={"Crop 1"}>Crop 1</option>
@@ -180,7 +183,7 @@ function Modal ({ showModal,closeModal,soil,setSoil }){
             <BiSolidImageAdd size={30} color="4A7A4C" className="absolute bottom-[20%] right-[60%] " />  
           </div>         
             <button className="text-white bg-[#4A7A4C] w-[250px] h-[45px] rounded-lg font-bold hover:text-[#4A7A4C] hover:bg-white border border-[#4A7A4C] ">SUBMIT</button>
-         </div>
+         </form>
          </div>
 
       </div>
@@ -190,7 +193,10 @@ function Modal ({ showModal,closeModal,soil,setSoil }){
 }
 
 function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
-
+  const handleModal2Submit = (e) =>{
+    e.preventDefault()
+    closeModal2()
+  }
   return showModal2 && (
     <div className="fixed inset-y-72 right-0 inset-x-10 md:fixed md:inset-y-0 md:inset-x-44 lg:fixed lg:inset-y-0 lg:right-0 lg:inset-x-80 md:right-0  flex items-center justify-center z-50  bg-opacity-50">
 
@@ -198,7 +204,7 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
          <button className="border-[3px] text-[#4A7A4C] bg-white w-[150px] h-[45px] rounded-lg mt-5 ml-5 border-[#4A7A4C] " onClick={closeModal2}>Back</button>
 
          <div className="flex justify-center items-center mt-5">
-         <div className="flex flex-col gap-y-10">
+         <form onSubmit={handleModal2Submit} className="flex flex-col gap-y-10">
             <h1 className="text-[#4A7A4C] text-5xl font-semibold">FARM DETAILS</h1>
           <div className="relative">       
             <input 
@@ -240,7 +246,7 @@ function Modal2 ({ showModal2,closeModal2,soil2,setSoil2 }){
               <option>Crop Type 3</option>
             </select>
             <button className="text-white bg-[#4A7A4C] w-[250px] h-[45px] rounded-lg font-bold hover:text-[#4A7A4C] hover:bg-white border border-[#4A7A4C] ">SUBMIT</button>
-         </div>
+         </form>
          </div>
 
       </div>
